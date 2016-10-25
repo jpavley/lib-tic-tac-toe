@@ -104,7 +104,7 @@ func getTicTacToeGameSubstringByIndex(game: String, index: Int) -> String {
 }
 
 func printableTicTacToeGame(game: String) -> String {
-    // TODO: break into rows using widht and height and replace symboles with markers
+    // break into rows using widht and height and replace symboles with markers
     
     var printString = ""
     let width = Int(getTicTacToeGameSubstringByIndex(game: game, index: widthIndex))!
@@ -116,7 +116,8 @@ func printableTicTacToeGame(game: String) -> String {
             let characterLocation = y + x
             let gameboardStringIndex = gameboard.index(gameboard.startIndex, offsetBy: characterLocation)
             printString.append(gameboard[gameboardStringIndex])
-        }
+            printString.append(" ")
+          }
         printString.append("\n")
     }
     
