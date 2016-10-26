@@ -124,6 +124,24 @@ func printableTicTacToeGame(game: String) -> String {
     return printString
 }
 
+func searchForWin(game: String) -> String {
+    
+    // TODO: returns the winning vector as comma delimied string in a game
+    // TODO: if there is no winner returns the empty string
+    // HINT: Winning vector: n in a row, column, or diagonal of the same symbol that is not untouched
+    // HINT: n = height or width for column or row
+    // HINT: diagonal is vector from top-left to bottom-right or top-right to bottom-left lenth of width
+    // STEP: discover all the vectors based on the height and with of the game
+    var vector:[Int]
+    var vectorList:[[Int]]
+    var width = Int(getTicTacToeGameSubstringByIndex(game: game, index: widthIndex))
+    var height = Int(getTicTacToeGameSubstringByIndex(game: game, index: heightIndex))
+    var game = getTicTacToeGameSubstringByIndex(game: game, index: gameboardIndex)
+    // STEP: search for game for the vectors
+    // STEP: return the first vector found or "" if no vectors found
+    return ""
+}
+
 let game1 = newTicTacToeGame(width: 3, height: 3)
 let isGame1Valid = validateTicTacToeGame(game: game1)
 let gameboard1 = getTicTacToeGameSubstringByIndex(game: game1, index: gameboardIndex)
